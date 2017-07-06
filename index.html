@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画图工具</title>
+    <link rel="stylesheet" href="./index.css" />
+</head>
+
+<body>
+    <div class="tool">
+        <p id="Pen" data-curos="default"></p>
+        <p id="Rect" data-curos="crosshair"></p>
+        <p id="Rutter" data-curos="default"></p>
+        <p id="Text" data-curos="text"></p>
+    </div>
+    <div class="color">
+        <ul class="clearfix">
+            <li>
+                <a href="javascript:;" data-color="rgba(255,0,0,.5)" title="红色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(255,128,0,.5)" title="橙色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(255,255,0,.5)" title="黄色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(0,255,0,.5)" title="绿色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(0,255,255,.5)" title="青色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(0,0,255,.5)" title="蓝色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(255,0,255,.5)" title="紫色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(0,0,0,.5)" title="黑色"></a>
+            </li>
+            <li>
+                <a href="javascript:;" data-color="rgba(255,255,255,.5)" title="白色"></a>
+            </li>
+        </ul>
+        <p>颜色</p>
+        <div class="targetColor"></div>
+        <p>笔画的大小</p>
+        <div class="line">
+            <p><span data-w="2"></span></p>
+            <p><span data-w="4"></span></p>
+            <p><span data-w="6"></span></p>
+            <p><span data-w="8"></span></p>
+            <p><span data-w="10"></span></p>
+        </div>
+        <p>字体样式</p>
+        <div class="text-style clearfix">
+            <p data-style="bold"></p>
+            <p data-style="italic"></p>
+            <p data-style="line"></p>
+            <p data-style="del"></p>
+        </div>
+        <p>字体大小</p>
+        <select class="font-size">
+            
+        </select>
+    </div>
+    <!--<span class="rutten-box"></span>-->
+    <canvas width="1000" height="600" id="canvas-main"></canvas>
+</body>
+<script src="./tool.js"></script>
+<script src="./index.js"></script>
+<!--<script>
+    var canvas = document.querySelector("canvas");
+    var cts = canvas.getContext("2d");
+    cts.lineWidth
+</script>-->
+
+</html>

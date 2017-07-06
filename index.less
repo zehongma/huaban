@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+canvas {
+    border: 1px solid skyblue;
+    cursor: default;
+}
+
+.color {
+    width: 120px;
+    height: 600px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #f5f6f7;
+    border-right: 1px solid #ccc;
+    ul {
+        list-style: none;
+        width: 100%;
+        padding-left: 0;
+        li {
+            float: left;
+            height: 20px;
+            width: 20px;
+            margin: 5px;
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+                line-height: 20px;
+                text-decoration: none;
+                color: #000;
+                padding: 5px;
+                border: 1px solid #000;
+                &:hover {
+                    border-color: skyblue;
+                }
+            }
+        }
+    }
+    .targetColor {
+        width: 50px;
+        height: 50px;
+        border: 1px solid #000;
+        margin: 0 auto;
+    }
+}
+
+.line {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 0 10px;
+    p {
+        height: 20px;
+        overflow: hidden;
+        margin: 5px 0;
+        box-sizing: border-box;
+        line-height: 15px;
+        &:hover {
+            border: 1px solid skyblue;
+        }
+        span {
+            display: inline-block;
+            width: 100%;
+            background: #000;
+            vertical-align: middle;
+        }
+        &:nth-of-type(1) {
+            span {
+                height: 2px;
+            }
+        }
+        &:nth-of-type(1) {
+            span {
+                height: 2px;
+            }
+        }
+        &:nth-of-type(2) {
+            span {
+                height: 4px;
+            }
+        }
+        &:nth-of-type(3) {
+            span {
+                height: 6px;
+            }
+        }
+        &:nth-of-type(4) {
+            span {
+                height: 8px;
+            }
+        }
+        &:nth-of-type(5) {
+            span {
+                height: 10px;
+            }
+        }
+    }
+}
+
+.tool-s() {
+    width: 23px;
+    height: 22px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+}
+
+.tool {
+    width: 40px;
+    height: 600px;
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    background: #f5f6f7;
+    p {
+        cursor: pointer;
+    }
+    #Pen {
+        .tool-s();
+        background-image: url("./img/pen.png");
+        &:hover {
+            border-color: skyblue;
+        }
+    }
+    #Rutter {
+        .tool-s();
+        background-image: url("./img/rutter.png");
+        &:hover {
+            border-color: skyblue;
+        }
+    }
+    #Rect {
+        .tool-s();
+        background-image: url("./img/rec.png");
+        &:hover {
+            border-color: skyblue;
+        }
+    }
+    #Text {
+        .tool-s();
+        background-image: url("./img/text.png");
+        &:hover {
+            border-color: skyblue;
+        }
+    }
+}
+
+textarea {
+    background: transparent;
+    position: absolute;
+    border: 1px dashed #999;
+    font-size: 16px;
+    outline: none;
+    &:focus {
+        border: 1px dashed #000;
+    }
+}
+
+.active {
+    position: relative;
+    &:after {
+        position: absolute;
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 255, 128, .3);
+    }
+}
+
+.text-style {
+    p {
+        .tool-s();
+        float: left;
+        margin:2px;
+        &:nth-of-type(1){
+            background-image: url("./img/B.png");
+        }
+        &:nth-of-type(2){
+            background-image: url("./img/I.png");
+        }
+        &:nth-of-type(3){
+            background-image: url("./img/bottom_line.png");
+        }
+        &:nth-of-type(4){
+            background-image: url("./img/del.png");
+        }
+    }
+}
+
+.recbox{
+    background: transparent;
+    position: absolute;
+    border: 1px dashed #fff;
+    box-shadow: 2px 2px 0 2px #000,-2px -2px 0 2px #000;
+}
